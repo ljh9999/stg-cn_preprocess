@@ -18,7 +18,7 @@ def thread1():
     global coor1
     global multi_frame_dict1
     # step1: go through all the video folder
-    for video_index, input in enumerate(['1','2','3','4','5']):
+    for video_index, input in enumerate(['11','12']):
         # 定义一个空字典，每个视频一个字典
         # 对一个视频重复300遍，扩大数据集规模
         for i in range(30):
@@ -59,7 +59,7 @@ def thread1():
                 confidence1 = []
 
             file_dict = {"data": multi_frame_dict1, "label": "cover_the_cloth", "label_index": 0}
-            output = open("./kinetics_train/" + video_name + ".json", "w")
+            output = open("./kinetics_val/" + video_name + ".json", "w")
             json.dump(file_dict, output)
 
 def thread2():
@@ -67,7 +67,7 @@ def thread2():
     global confidence2
     global coor2
     global multi_frame_dict2
-    for video_index, input in enumerate(['6','7','8','9','10']):
+    for video_index, input in enumerate(['13','14']):
         # 定义一个空字典，每个视频一个字典
         # 对一个视频重复300遍，扩大数据集规模
         for i in range(30):
@@ -108,7 +108,7 @@ def thread2():
                 confidence2 = []
 
             file_dict = {"data": multi_frame_dict2, "label": "cover_the_cloth", "label_index": 0}
-            output = open("./kinetics_train/" + video_name + ".json", "w")
+            output = open("./kinetics_val/" + video_name + ".json", "w")
             json.dump(file_dict, output)
 
 

@@ -19,8 +19,6 @@ def batchRenameFile(srcDir, dst_file):
         item_name = item.split('.')[0]
         print("item_name:",item_name)
 
-        #TODO 需要对这个json文件进行扩充操作，1.json————>1_001.json ~ 1_300.json
-
         if item_index < len(os.listdir(srcDir))-1:
 
             with open(filename, 'a') as file_object:
