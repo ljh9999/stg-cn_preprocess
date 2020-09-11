@@ -6,99 +6,132 @@ import glob
 import pdb
 import random
 import string
-
-coor = []
-confidence = []
-multi_frame_dict = []
-
-video_path = os.listdir("output_cover_the_cloth")
-
-# step1: go through all the video folder
-for video_index, input in enumerate(video_path):
-    # 定义一个空字典，每个视频一个字典
-    file_dict = {}
-    video_name = input
-    print("video_name: ", video_name)
-    # 遍历每一帧
-
-    # 这样写有问题！！修改为字符串
-
-    for frame_index, frame in enumerate(glob.glob("./output_cover_the_cloth/" + str(video_name) + "/*")):
-        # 使用随机名，而且
-        frame_name = ''.join(random.sample(string.ascii_letters + string.digits, 8)) + str(frame_index) + ''.join(
-            random.sample(string.ascii_letters + string.digits, 2))
-        print("input_file_name: ", frame_name)
-        with open(frame_name, 'r') as f:
-            s1 = json.load(f)
-            # 这样做有问题，会丢帧的
-            if len(s1['people']) == 0:
-                print("wrong frame:", frame_index)
-                pdb.set_trace()
-                continue
-            people = s1['people'][0]
-            pose_keypoints_2d = people['pose_keypoints_2d']
-            print(pose_keypoints_2d)
-
-            for indx, data in enumerate(pose_keypoints_2d):
-                if indx % 3 == 0:
-                    coor.append(float('%.3f' % data))
-                if (indx - 1) % 3 == 0:
-                    coor.append(float('%.3f' % data))
-                if (indx - 2) % 3 == 0:
-                    confidence.append(float('%.3f' % data))
-
-        print("coor:", coor)
-        print("confidence: ", confidence)
-
-        info_dict = {"pose": coor, "score": confidence}
-        single_frame_dict = {"frame_index": frame_index + 1, "skeleton": [info_dict]}
-
-        multi_frame_dict.append(single_frame_dict)
-        coor = []
-        confidence = []
-
-    file_dict = {"data": multi_frame_dict, "label": "cover_the_cloth", "label_index": 0}
-    output = open("./kinetics_train/" + input + ".json", "w")
-    json.dump(file_dict, output)
-
-# for frame_index, input in enumerate(input_list):
-#     input_file = os.path.join("output/",input)
-#     with open(input_file,'r') as f:
-#         s1 = json.load(f)
-#         if len(s1['people']) == 0:
-#             continue
-#         people = s1['people'][0]
-#         pose_keypoints_2d = people['pose_keypoints_2d']
-#         print(pose_keypoints_2d)
-#         pdb.set_trace()
-#         # read out the coordination and confidence
-#
-#
-#         for indx, data in enumerate(pose_keypoints_2d):
-#             if indx % 3 == 0:
-#                 coor.append(float('%.3f' % data))
-#             if (indx-1) % 3 == 0:
-#                 coor.append(float('%.3f' % data))
-#             if (indx - 2) % 3 == 0:
-#                 confidence.append(float('%.3f' % data))
-
-# print("coor:", coor)
-# print("confidence: ", confidence)
-
-# info_dict = {"pose":coor, "score":confidence}
-# single_frame_dict = {"frame_index":frame_index+1, "skeleton":[info_dict]}
-#
-# multi_frame_dict.append(single_frame_dict)
-# coor = []
-# confidence = []
-
-# file_dict = {"data":multi_frame_dict, "label":"mopping", "label_index":1}
+import threading
+from threading import Thread
+# from threading import *
 
 
-# one video fraction corresponds to one json file
-# output = open("./test.json", "w")
-#
-# json.dump(file_dict,output)
+
+
+def thread1():
+    global confidence1
+    global coor1
+    global multi_frame_dict1
+    # step1: go through all the video folder
+    for video_index, input in enumerate(['1','2','3','4','5']):
+        # 定义一个空字典，每个视频一个字典
+        # 对一个视频重复300遍，扩大数据集规模
+        for i in range(30):
+            file_dict = {}
+            video_name = ''.join(random.sample(string.ascii_letters + string.digits, 8)) + str(input) + ''.join(
+                random.sample(string.ascii_letters + string.digits, 2))
+            print("video_name: ", video_name)
+            # 遍历每一帧
+            # 因为input是1~12的数字，而我重命名了生成了json文件，所以这儿的input不一样
+            for frame_index, frame in enumerate(glob.glob("./output_cover_the_cloth/" + str(input) + "/*")):
+                # print("input_file_name: ", frame)
+                # print("frame_index: ",frame_index)
+                with open(frame, 'r') as f:
+                    s1 = json.load(f)
+                    # 这样做有问题，会丢帧的
+                    if len(s1['people']) == 0:
+                        continue
+                    people = s1['people'][0]
+                    pose_keypoints_2d = people['pose_keypoints_2d']
+                    print(pose_keypoints_2d)
+
+                    for indx, data in enumerate(pose_keypoints_2d):
+                        if indx % 3 == 0:
+                            coor1.append(float('%.3f' % data))
+                        if (indx - 1) % 3 == 0:
+                            coor1.append(float('%.3f' % data))
+                        if (indx - 2) % 3 == 0:
+                            confidence1.append(float('%.3f' % data))
+
+                    print("coor:", coor1)
+                    print("confidence: ", confidence1)
+
+                info_dict = {"pose": coor1, "score": confidence1}
+                single_frame_dict = {"frame_index": frame_index + 1, "skeleton": [info_dict]}
+                print("single_frame_dict:", single_frame_dict)
+                multi_frame_dict1.append(single_frame_dict)
+                coor1 = []
+                confidence1 = []
+
+            file_dict = {"data": multi_frame_dict1, "label": "cover_the_cloth", "label_index": 0}
+            output = open("./kinetics_train/" + video_name + ".json", "w")
+            json.dump(file_dict, output)
+
+def thread2():
+    # step1: go through all the video folder
+    global confidence2
+    global coor2
+    global multi_frame_dict2
+    for video_index, input in enumerate(['6','7','8','9','10']):
+        # 定义一个空字典，每个视频一个字典
+        # 对一个视频重复300遍，扩大数据集规模
+        for i in range(30):
+            file_dict = {}
+            video_name = ''.join(random.sample(string.ascii_letters + string.digits, 8)) + str(input) + ''.join(
+                random.sample(string.ascii_letters + string.digits, 2))
+            print("video_name: ", video_name)
+            # 遍历每一帧
+            # 因为input是1~12的数字，而我重命名了生成了json文件，所以这儿的input不一样
+            for frame_index, frame in enumerate(glob.glob("./output_cover_the_cloth/" + str(input) + "/*")):
+                # print("input_file_name: ", frame)
+                # print("frame_index: ",frame_index)
+                with open(frame, 'r') as f:
+                    s1 = json.load(f)
+                    # 这样做有问题，会丢帧的
+                    if len(s1['people']) == 0:
+                        continue
+                    people = s1['people'][0]
+                    pose_keypoints_2d = people['pose_keypoints_2d']
+                    print(pose_keypoints_2d)
+
+                    for indx, data in enumerate(pose_keypoints_2d):
+                        if indx % 3 == 0:
+                            coor2.append(float('%.3f' % data))
+                        if (indx - 1) % 3 == 0:
+                            coor2.append(float('%.3f' % data))
+                        if (indx - 2) % 3 == 0:
+                            confidence2.append(float('%.3f' % data))
+
+                    print("coor:", coor2)
+                    print("confidence: ", confidence2)
+
+                info_dict = {"pose": coor2, "score": confidence2}
+                single_frame_dict = {"frame_index": frame_index + 1, "skeleton": [info_dict]}
+                print("single_frame_dict:", single_frame_dict)
+                multi_frame_dict2.append(single_frame_dict)
+                coor2 = []
+                confidence2 = []
+
+            file_dict = {"data": multi_frame_dict2, "label": "cover_the_cloth", "label_index": 0}
+            output = open("./kinetics_train/" + video_name + ".json", "w")
+            json.dump(file_dict, output)
+
+
+if __name__ == "__main__":
+    coor1 = []
+    coor2 = []
+    confidence1 = []
+    confidence2 = []
+    multi_frame_dict1 = []
+    multi_frame_dict2 = []
+
+    video_path = os.listdir("output_cover_the_cloth")
+    t1 = Thread(target=thread1)
+    t2 = Thread(target=thread2)
+
+    print("??")
+
+    t1.start()
+    t2.start()
+    t1.join()
+    t2.join()
+    print("finished")
+
 
 '''
 single frame format
