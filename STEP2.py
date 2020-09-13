@@ -18,9 +18,7 @@ def batchRenameFile(srcDir, dst_file):
     for item_index, item in enumerate(os.listdir(srcDir)):
         item_name = item.split('.')[0]
         print("item_name:",item_name)
-
         if item_index < len(os.listdir(srcDir))-1:
-
             with open(filename, 'a') as file_object:
                 file_object.write('    "' + item_name + '":{ \n')
                 file_object.write('        "has_skeleton": true, \n')
@@ -43,7 +41,6 @@ def batchRenameFile(srcDir, dst_file):
 
 
 if __name__ == '__main__':
-    src_path = './kinetics_val'
-    dst_file = 'kinetics_val_label.json'
+    src_path = './kinetics_train'
+    dst_file = 'kinetics_train_label.json'
     batchRenameFile(src_path, dst_file)
-
