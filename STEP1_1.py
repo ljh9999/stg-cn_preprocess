@@ -5,13 +5,14 @@ import os
 import glob
 import random
 import string
+from tqdm import tqdm
 
 def thread1(process_folder, label_name):
     global confidence1
     global coor1
     global multi_frame_dict1
     # step1: go through all the video folder
-    for video_index, input in enumerate(i for i in range(1,14)):
+    for input in tqdm(range(1,14)):
         # 对一个视频重复300遍，扩大数据集规模
         for i in range(15):
             # 定义一个空字典，每个视频一个字典
@@ -58,7 +59,7 @@ def thread2(process_folder, label_name):
     global confidence2
     global coor2
     global multi_frame_dict2
-    for video_index, input in enumerate(i for i in range(15,41)):
+    for input in tqdm(range(15,28)):
         # 定义一个空字典，每个视频一个字典
         # 对一个视频重复300遍，扩大数据集规模
         for i in range(30):

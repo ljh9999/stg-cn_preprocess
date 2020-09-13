@@ -1,10 +1,10 @@
 # STEP 1
 # acquire the kinetics_train folder which contains all the frames in each video, and there are 14 videos in total.
 import json
-import os
 import glob
 import random
 import string
+from tqdm import tqdm
 
 def thread1(process_folder, label_name):
     global confidence1
@@ -61,7 +61,7 @@ def thread2(process_folder, label_name):
     global confidence2
     global coor2
     global multi_frame_dict2
-    for video_index, input in enumerate(i for i in range(15,41)):
+    for input in tqdm(range(15,28)):
         # 定义一个空字典，每个视频一个字典
         # 对一个视频重复300遍，扩大数据集规模
         for i in range(30):

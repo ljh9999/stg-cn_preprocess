@@ -1,0 +1,332 @@
+{
+    "e1UfcA010H":{ 
+        "has_skeleton": true, 
+        "label": "mopping",   
+        "label_index": 1
+    }, 
+    "wXmQxA01tA":{ 
+        "has_skeleton": true, 
+        "label": "mopping",   
+        "label_index": 1
+    }, 
+    "1ZJvjA01Au":{ 
+        "has_skeleton": true, 
+        "label": "mopping",   
+        "label_index": 1
+    }, 
+    "E4wptA0184":{ 
+        "has_skeleton": true, 
+        "label": "mopping",   
+        "label_index": 1
+    }, 
+    "QXe9LA01tM":{ 
+        "has_skeleton": true, 
+        "label": "mopping",   
+        "label_index": 1
+    }, 
+    "NcJtgA01gA":{ 
+        "has_skeleton": true, 
+        "label": "mopping",   
+        "label_index": 1
+    }, 
+    "aPXsfA01D1":{ 
+        "has_skeleton": true, 
+        "label": "mopping",   
+        "label_index": 1
+    }, 
+    "tU5MzA01gT":{ 
+        "has_skeleton": true, 
+        "label": "mopping",   
+        "label_index": 1
+    }, 
+    "SK1xLA016R":{ 
+        "has_skeleton": true, 
+        "label": "mopping",   
+        "label_index": 1
+    }, 
+    "7x8FYA015a":{ 
+        "has_skeleton": true, 
+        "label": "mopping",   
+        "label_index": 1
+    }, 
+    "5jXEuA00ao":{ 
+        "has_skeleton": true, 
+        "label": "cover_the_cloth",   
+        "label_index": 0
+    }, 
+    "OF6WzA01xb":{ 
+        "has_skeleton": true, 
+        "label": "mopping",   
+        "label_index": 1
+    }, 
+    "P8xCqA00B8":{ 
+        "has_skeleton": true, 
+        "label": "cover_the_cloth",   
+        "label_index": 0
+    }, 
+    "Lfyo5A01Vs":{ 
+        "has_skeleton": true, 
+        "label": "mopping",   
+        "label_index": 1
+    }, 
+    "jMNE8A01jG":{ 
+        "has_skeleton": true, 
+        "label": "mopping",   
+        "label_index": 1
+    }, 
+    "1zNAVA01ky":{ 
+        "has_skeleton": true, 
+        "label": "mopping",   
+        "label_index": 1
+    }, 
+    "ln7MyA00Cg":{ 
+        "has_skeleton": true, 
+        "label": "cover_the_cloth",   
+        "label_index": 0
+    }, 
+    "lvqA2A00nw":{ 
+        "has_skeleton": true, 
+        "label": "cover_the_cloth",   
+        "label_index": 0
+    }, 
+    "S0Xv8A01Vf":{ 
+        "has_skeleton": true, 
+        "label": "mopping",   
+        "label_index": 1
+    }, 
+    "njXtEA01qv":{ 
+        "has_skeleton": true, 
+        "label": "mopping",   
+        "label_index": 1
+    }, 
+    "2xb6tA01Wy":{ 
+        "has_skeleton": true, 
+        "label": "mopping",   
+        "label_index": 1
+    }, 
+    "ybWqDA000s":{ 
+        "has_skeleton": true, 
+        "label": "cover_the_cloth",   
+        "label_index": 0
+    }, 
+    "fa6WnA01FP":{ 
+        "has_skeleton": true, 
+        "label": "mopping",   
+        "label_index": 1
+    }, 
+    "FimzAA01vn":{ 
+        "has_skeleton": true, 
+        "label": "mopping",   
+        "label_index": 1
+    }, 
+    "uSXEBA01TA":{ 
+        "has_skeleton": true, 
+        "label": "mopping",   
+        "label_index": 1
+    }, 
+    "6jfa1A01gr":{ 
+        "has_skeleton": true, 
+        "label": "mopping",   
+        "label_index": 1
+    }, 
+    "lhH6UA01FP":{ 
+        "has_skeleton": true, 
+        "label": "mopping",   
+        "label_index": 1
+    }, 
+    "sjP2RA000B":{ 
+        "has_skeleton": true, 
+        "label": "cover_the_cloth",   
+        "label_index": 0
+    }, 
+    "uTvjbA01ov":{ 
+        "has_skeleton": true, 
+        "label": "mopping",   
+        "label_index": 1
+    }, 
+    "F65OiA01J1":{ 
+        "has_skeleton": true, 
+        "label": "mopping",   
+        "label_index": 1
+    }, 
+    "7OF4NA01rE":{ 
+        "has_skeleton": true, 
+        "label": "mopping",   
+        "label_index": 1
+    }, 
+    "Gcf4dA01YI":{ 
+        "has_skeleton": true, 
+        "label": "mopping",   
+        "label_index": 1
+    }, 
+    "sB0q1A01iC":{ 
+        "has_skeleton": true, 
+        "label": "mopping",   
+        "label_index": 1
+    }, 
+    "YPnfVA00jB":{ 
+        "has_skeleton": true, 
+        "label": "cover_the_cloth",   
+        "label_index": 0
+    }, 
+    "exmL3A01Nb":{ 
+        "has_skeleton": true, 
+        "label": "mopping",   
+        "label_index": 1
+    }, 
+    "R4faxA01V2":{ 
+        "has_skeleton": true, 
+        "label": "mopping",   
+        "label_index": 1
+    }, 
+    "Jj9vNA01Uk":{ 
+        "has_skeleton": true, 
+        "label": "mopping",   
+        "label_index": 1
+    }, 
+    "AYxuDA01QL":{ 
+        "has_skeleton": true, 
+        "label": "mopping",   
+        "label_index": 1
+    }, 
+    "KmEDFA00lS":{ 
+        "has_skeleton": true, 
+        "label": "cover_the_cloth",   
+        "label_index": 0
+    }, 
+    "eSKzuA01Pf":{ 
+        "has_skeleton": true, 
+        "label": "mopping",   
+        "label_index": 1
+    }, 
+    "e7DijA01xk":{ 
+        "has_skeleton": true, 
+        "label": "mopping",   
+        "label_index": 1
+    }, 
+    "xk0m1A0120":{ 
+        "has_skeleton": true, 
+        "label": "mopping",   
+        "label_index": 1
+    }, 
+    "CNJbgA002u":{ 
+        "has_skeleton": true, 
+        "label": "cover_the_cloth",   
+        "label_index": 0
+    }, 
+    "5HfROA00da":{ 
+        "has_skeleton": true, 
+        "label": "cover_the_cloth",   
+        "label_index": 0
+    }, 
+    "48kMrA01f7":{ 
+        "has_skeleton": true, 
+        "label": "mopping",   
+        "label_index": 1
+    }, 
+    "rlbCLA01GN":{ 
+        "has_skeleton": true, 
+        "label": "mopping",   
+        "label_index": 1
+    }, 
+    "lfexCA00xd":{ 
+        "has_skeleton": true, 
+        "label": "cover_the_cloth",   
+        "label_index": 0
+    }, 
+    "7mVZEA01Ex":{ 
+        "has_skeleton": true, 
+        "label": "mopping",   
+        "label_index": 1
+    }, 
+    "FLDTYA00dN":{ 
+        "has_skeleton": true, 
+        "label": "cover_the_cloth",   
+        "label_index": 0
+    }, 
+    "ch4DkA012R":{ 
+        "has_skeleton": true, 
+        "label": "mopping",   
+        "label_index": 1
+    }, 
+    "0d1pBA008o":{ 
+        "has_skeleton": true, 
+        "label": "cover_the_cloth",   
+        "label_index": 0
+    }, 
+    "iU1ebA019m":{ 
+        "has_skeleton": true, 
+        "label": "mopping",   
+        "label_index": 1
+    }, 
+    "MGjN7A01kf":{ 
+        "has_skeleton": true, 
+        "label": "mopping",   
+        "label_index": 1
+    }, 
+    "Kx7JTA009H":{ 
+        "has_skeleton": true, 
+        "label": "cover_the_cloth",   
+        "label_index": 0
+    }, 
+    "bA0tFA01h9":{ 
+        "has_skeleton": true, 
+        "label": "mopping",   
+        "label_index": 1
+    }, 
+    "2Bn3VA01M8":{ 
+        "has_skeleton": true, 
+        "label": "mopping",   
+        "label_index": 1
+    }, 
+    "mK4EgA01nS":{ 
+        "has_skeleton": true, 
+        "label": "mopping",   
+        "label_index": 1
+    }, 
+    "vZ7jtA011W":{ 
+        "has_skeleton": true, 
+        "label": "mopping",   
+        "label_index": 1
+    }, 
+    "E2xzhA00SA":{ 
+        "has_skeleton": true, 
+        "label": "cover_the_cloth",   
+        "label_index": 0
+    }, 
+    "veTMaA006A":{ 
+        "has_skeleton": true, 
+        "label": "cover_the_cloth",   
+        "label_index": 0
+    }, 
+    "mOC9rA00x0":{ 
+        "has_skeleton": true, 
+        "label": "cover_the_cloth",   
+        "label_index": 0
+    }, 
+    "VrkBXA01aA":{ 
+        "has_skeleton": true, 
+        "label": "mopping",   
+        "label_index": 1
+    }, 
+    "2fwIyA00dB":{ 
+        "has_skeleton": true, 
+        "label": "cover_the_cloth",   
+        "label_index": 0
+    }, 
+    "DjRGbA00rs":{ 
+        "has_skeleton": true, 
+        "label": "cover_the_cloth",   
+        "label_index": 0
+    }, 
+    "zisQxA017s":{ 
+        "has_skeleton": true, 
+        "label": "mopping",   
+        "label_index": 1
+    }, 
+    "UiMLKA01Lp":{ 
+        "has_skeleton": true, 
+        "label": "mopping",   
+        "label_index": 1
+    } 
+}
